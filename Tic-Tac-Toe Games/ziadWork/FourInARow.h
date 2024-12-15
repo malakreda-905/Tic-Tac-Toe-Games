@@ -13,7 +13,7 @@ public:
     bool is_win();
     bool is_draw();
     bool game_is_over();
-    auto get_board(int x, int y); //
+    auto get_board(int x, int y); 
 };
 
 template <typename T>
@@ -169,7 +169,7 @@ void FourInARow_Player<T>::getmove(int &x, int &y)
 {
     cout << "\nPlease enter your move y in range {0,6}: ";
     cin >> y;
-    x = 5; // max
+    x = 5; 
     auto *boardCopy = dynamic_cast<FourInARow_Board<T> *>(this->boardPtr);
     while (x >= 0 && boardCopy->get_board(x, y) != 0)
         x--;
@@ -191,7 +191,7 @@ template <typename T>
 void FourInARow_Random_Player<T>::getmove(int &x, int &y)
 {
     y = rand() % this->dimension;
-    x = 5; // max
+    x = 5; 
     auto *boardCopy = dynamic_cast<FourInARow_Board<T> *>(this->boardPtr);
     while (x >= 0 && boardCopy->get_board(x, y) != 0)
         x--;
