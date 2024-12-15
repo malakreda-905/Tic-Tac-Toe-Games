@@ -152,4 +152,4 @@ void X_O_Random_Player<T>::getmove(int& x, int& y) {
     y = rand() % 3;
 }
 
-#endif //_3X3X_O_H
+#endif // 3x3X_O.h
